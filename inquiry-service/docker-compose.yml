@@ -1,0 +1,10 @@
+services:
+  inquiry-db:
+    image: postgres:16
+    container_name: inquiry-db
+    environment:
+      POSTGRES_DB: inquiry_db
+      POSTGRES_USER: ${INQUIRY_DB_USERNAME}
+      POSTGRES_PASSWORD: ${INQUIRY_DB_PASSWORD}
+    ports:
+      - "5435:5432"
